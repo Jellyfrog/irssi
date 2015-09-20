@@ -289,5 +289,20 @@ FORMAT_REC fecommon_core_formats[] = {
 	{ "completion_line", "%#$[10]0 $[!40]1 $2", 3, { 0, 0, 0 } },
 	{ "completion_footer", "", 0 },
 
+	/* ---- */
+	{ NULL, "TLS", 0 },
+
+	{ "tls_ephemeral_key", "EDH Key: {hilight $0} bits ({hilight $1})", 2, { 1, 0 } },
+	{ "tls_ephemeral_key_unavailable", "EDH Key: {error N/A}", 0 },
+	{ "tls_public_key",       "Public Key: {hilight $0} bits ({hilight $1})", 2, { 1, 0 } },
+	{ "tls_cert_header", "Certificate Chain:", 0 },
+	{ "tls_cert_subject_header", "  Subject:", 0 },
+	{ "tls_cert_issuer_header", "  Issuer:", 0 },
+	{ "tls_cert_named_entry", "    $[-2]0: {hilight $1}", 2, { 0, 0 } },
+	{ "tls_cert_fingerprint", "Fingerprint: {hilight $0} ({hilight $1})", 2, { 0, 0 } },
+	{ "tls_cipher",           "Cipher: {hilight $0} bits ({hilight $1})", 2, { 1, 0 } },
+	{ "tls_protocol_version", "Protocol: {hilight $0}", 1, { 0 } },
+	{ "tls_validation_period", "Valid From: {hilight $0} to {hilight $1}", 2, { 0, 0} },
+
 	{ NULL, NULL, 0 }
 };
